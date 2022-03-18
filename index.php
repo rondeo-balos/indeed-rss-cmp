@@ -7,7 +7,7 @@
   $result = curl_exec($c);
   curl_close($c);
 
-  $doc = phpQuery::newDocumentHTML($result);
+  //$doc = phpQuery::newDocumentHTML($result);
 
   $out = "";
   $out .= "<pre>";
