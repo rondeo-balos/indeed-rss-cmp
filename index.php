@@ -1,5 +1,5 @@
 <?php
-  require('phpQuery/phpQuery.php');
+  require('FluentDOM.php');
 
   $c = curl_init("https://uk.indeed.com/cmp/Game-Nation/jobs");
   $raw = true;
@@ -8,6 +8,12 @@
   curl_close($c);
 
   //$doc = phpQuery::newDocumentHTML($result);
+
+  FluentDOM::load(
+    $result,
+    'text/html',
+    [FluentDOM\Loader\Options::ALLOW_FILE => TRUE]
+  );
 
   $out = "";
   $out .= "<pre>";
