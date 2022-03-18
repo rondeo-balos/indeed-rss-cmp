@@ -26,11 +26,11 @@
   $items = $xpath->query("//*[@data-testid='jobListItem']");
   if(!is_null($items)){
     foreach($items as $item){
-      $title = $item->query("//*[@data-testid='jobListItem-title']/h3/button");
+      //$title = $item->query("//*[@data-testid='jobListItem-title']/h3/button");
       //$title = $xpath->query("//*[@data-testid='jobListItem'][$i]/div/div/div[@data-testid='jobListItem-title']/h3/button/text()");
       
       $out .= "<item>
-        <title>".$title."</title>
+        <title></title>
         <link>https://uk.indeed.com/cmp/Game-Nation/jobs</link>
         <source>Game Nation</source>
         <pubDate></pubDate>
